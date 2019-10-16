@@ -71,13 +71,75 @@
 
 
   <!-- ================ contact section start ================= -->
-  <section class="section-margin">
+<!--   <section class="section-margin">
     <div class="container">
       <div class="d-none d-sm-block mb-5 pb-4">
-       <a href="#">
-			<img src="img/uci-map.png" alt="">
-		</a>
-      </div>
+        <div id="map" style="height: 480px;"></div> -->
+
+<!--         <script>
+          function initMap() {
+            var uluru = {lat: 33.6873, lng: -177.82591};
+            var grayStyles = [
+              {
+                featureType: "all",
+                stylers: [
+                  { saturation: -90 },
+                  { lightness: 50 }
+                ]
+              },
+              {elementType: 'labels.text.fill', stylers: [{color: '#A3A3A3'}]}
+            ];
+            var map = new google.maps.Map(document.getElementById('map'), {
+              center: {lat: 33.6873, lng: -117.82591},
+              zoom: 9,
+              styles: grayStyles,
+              scrollwheel:  false
+            });
+          }
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpfS1oRGreGSBU5HHjMmQ3o5NLw7VdJ6I&callback"></script>
+      	</div> -->
+
+  <!--================ Contact Map Area =================-->
+	<section class="portfolio_area section-margin pb-0" id="portfolio">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="main_title">
+						<p class="top_text">Our Portfolio <span></span></p>
+						<h2>Check Our Recent <br>
+							Client Work </h2>
+					</div>
+				</div>
+			</div>
+
+			<div class="filters portfolio-filter">
+				<ul>
+					<li class="active" data-filter="*">All</li>
+					<li data-filter=".popular">Data Science</li>
+					<li data-filter=".latest">UX Research</li>
+					<li data-filter=".following">Healthcare</li>
+				</ul>
+			</div>
+
+			<div class="filters-content">
+				<div class="row portfolio-grid">
+					<div class="grid-sizer col-md-3 col-lg-3"></div>
+					<div class="col-lg-6 col-md-6 all following">
+						<div class="single_portfolio">
+							<img class="img-fluid w-100" src="img/portfolio/p1.jpg" alt="">
+							<div class="overlay"></div>
+							<div class="short_info">
+								<h4><a href="portfolio-details.html">Lens Mockup Design</a></h4>
+								<p>Art, Data Science</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
 
 
       <div class="row">
