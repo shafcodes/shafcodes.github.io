@@ -1,5 +1,6 @@
 # shafcodes.github.io
 Shaf's Data Science Portfolio Website.
+
 I have a background in Optometry and clinical research. However, human emphasis on "building for averages" has made me look beyond my field in pursuit of personalization of learning, technology, and media. 
 To bridge the gaps in societal disparities, inequity, and universal design, I chose to apply my skills as a clinician, a psychology and human development researcher, and a data scientist to personalize technology, learning, entertainment, and achievement. 
 Here, I demonstrate a few data science and user-experience research skills that drive my academic journey.
