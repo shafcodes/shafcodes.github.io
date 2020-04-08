@@ -20,6 +20,20 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxO7Csk1jCmjr5Ym1MSQ9JKQ_L_cGDMxXpT7WA_8EpzATggOJY/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+	
+	
 <body>
 
 	<!--================ Start Header Area =================-->
@@ -81,7 +95,7 @@
 			<div class="filters-content">
 				<div class="row portfolio-grid">
 					<div class="grid-sizer col-md-3 col-lg-3"></div>
-					<div class="col-lg-6 col-md-6 all following">
+					<div class="col-lg-6 col-md-6 all following col-xl-12">
 						<div class="single_portfolio">
 							<img class="img-fluid w-100" src="img/brands/uci-map.png" alt="">
 							<div class="overlay"></div>
@@ -139,37 +153,13 @@
           <h2 class="contact-title">Get in Touch</h2>
         </div>
         <div class="col-lg-8 mb-4 mb-lg-0">
-          <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
-            <div class="row">
-              <div class="col-12">
-                <div class="form-group">
-                    <textarea class="form-control w-100" name="message" id="message" cols="30" rows="9" placeholder="Enter Message"></textarea>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="form-group">
-                  <input class="form-control" name="name" id="name" type="text" placeholder="Enter your name">
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="form-group">
-                  <input class="form-control" name="email" id="email" type="email" placeholder="Enter email address">
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="form-group">
-                  <input class="form-control" name="subject" id="subject" type="text" placeholder="Enter Subject">
-                </div>
-              </div>
-            </div>
-            <div class="form-group mt-lg-3">
-              <button type="submit" class="primary_btn button-contactForm">Send Message</button>
-            </div>
-          </form>
-
-
-        </div>
-
+<form name="submit-to-google-sheet">
+  <input name="email" type="email" placeholder="Email" required>
+  <input name="name" type="text" placeholder="Your Name">
+  <input name="subject" type="text" placeholder="Your Subject">
+  <input name="message" type="text" placeholder="Your Message">
+  <button type="submit">Send</button>
+</form>
         <div class="col-lg-4">
           <div class="media contact-info">
             <span class="contact-info__icon"><i class="ti-home"></i></span>
