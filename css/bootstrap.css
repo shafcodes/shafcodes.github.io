@@ -4633,7 +4633,8 @@ input[type=submit].btn-block {
 }
 
 .card-text:last-child {
-    margin-bottom: 0
+    margin-bottom: 0;
+    color: #fff;
 }
 
 .card-link:hover {
